@@ -3,13 +3,15 @@ cc.Class({
 
     properties: {
         // nodes
-        point: cc.Label,
-        suit: cc.Sprite,
+        pointup: cc.Sprite,
+        pointdown: cc.Sprite,
+        suitup: cc.Sprite,
+        suitdown: cc.Sprite,
         mainPic: cc.Sprite,
-        cardBG: cc.Sprite,
+        // cardBG: cc.Sprite,
         // resources
-        redTextColor: cc.Color.WHITE,
-        blackTextColor: cc.Color.WHITE,
+        // redTextColor: cc.Color.WHITE,
+        // blackTextColor: cc.Color.WHITE,
         texFrontBG: cc.SpriteFrame,
         texBackBG: cc.SpriteFrame,
         texFaces: {
@@ -40,14 +42,15 @@ cc.Class({
         // for jsb
         this.point.string = card.pointName;
 
-        if (card.isRedSuit) {
-            this.point.node.color = this.redTextColor;
-        }
-        else {
-            this.point.node.color = this.blackTextColor;
-        }
+        // if (card.isRedSuit) {
+        //     this.point.node.color = this.redTextColor;
+        // }
+        // else {
+        //     this.point.node.color = this.blackTextColor;
+        // }
 
-        this.suit.spriteFrame = this.texSuitSmall[card.suit - 1];
+        this.suitup.spriteFrame = this.texSuitSmall[card.suit - 1];
+        this.suitdown.spriteFrame = this.texSuitSmall[card.suit - 1];
     },
 
     reveal: function (isFaceUp) {

@@ -1,5 +1,3 @@
-var decks = require("Decks");
-var type = require("Types");
 cc.Class({
     extends: cc.Component,
 
@@ -18,7 +16,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        var deck = new decks(2);
+
     },
 
     // called every frame, uncomment this function to activate update callback
