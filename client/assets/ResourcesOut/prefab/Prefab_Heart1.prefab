@@ -45,11 +45,11 @@
     ],
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 0.6,
+    "_scaleY": 0.6,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 89,
+      "x": 102,
       "y": 91
     },
     "_skewX": 0,
@@ -789,6 +789,9 @@
     },
     "mainPic": {
       "__id__": 7
+    },
+    "cardAlats": {
+      "__uuid__": "0244105a-8ac6-4b58-abf8-1db01dfd724e"
     },
     "texFrontBG": {
       "__uuid__": "1e3d6589-1ac9-4141-b7c3-420d22483747"

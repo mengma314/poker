@@ -1,8 +1,8 @@
 var Suit = cc.Enum({
-    Spade: 1,   // 黑桃
-    Heart: 2,   // 红桃
-    Club: 3,    // 梅花(黑)
-    Diamond: 4, // 方块(红)
+    Spade: 4,   // 黑桃
+    Heart: 3,   // 红桃
+    Club: 2,    // 梅花(黑)
+    Diamond: 1, // 方块(红)
 });
 
 var A2_10JQK = 'NAN,2,3,4,5,6,7,8,9,10,J,Q,K,A'.split(',');
@@ -94,7 +94,5 @@ var Outcome = cc.Enum({
 module.exports = {
     Suit: Suit,
     Card: Card,
-    ActorPlayingState: ActorPlayingState,
-    Hand: Hand,
     Outcome: Outcome,
 };

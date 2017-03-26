@@ -10,7 +10,7 @@ function Decks (numberOfDecks) {
     // 总共几副牌
     this._numberOfDecks = numberOfDecks;
     // 还没发出去的牌
-    this._cardIds = new Array(numberOfDecks * 52);
+    this._cardIds = new Array(numberOfDecks * 54);
 
     this.reset();
 }
