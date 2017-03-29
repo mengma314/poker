@@ -1,4 +1,5 @@
 var Suit = cc.Enum({
+    joker:5,  // 大小王
     Spade: 4,   // 黑桃
     Heart: 3,   // 红桃
     Club: 2,    // 梅花(黑)
@@ -9,7 +10,7 @@ var A2_10JQK = 'NAN,2,3,4,5,6,7,8,9,10,J,Q,K,A'.split(',');
 
 /**
  * 扑克牌类，只用来表示牌的基本属性，不包含游戏逻辑，所有属性只读，
- * 因此全局只需要有 52 个实例（去掉大小王），不论有多少副牌
+ * 因此全局只需要有 54 个实例，不论有多少副牌
  * @class Card
  * @constructor
  * @param {Number} point - 可能的值为 1 到 13
@@ -60,8 +61,8 @@ Card.prototype.toString = function () {
     return this.suitName + ' ' + this.pointName;
 };
 
-// 存放 52 张扑克的实例
-var cards = new Array(52);
+// 存放 54 张扑克的实例
+var cards = new Array(54);
 
 /**
  * 返回指定 id 的实例
@@ -79,6 +80,12 @@ Card.fromId = function (id) {
             cards[card.id] = card;
         }
     }
+    //小王
+    var joker1 = new Card(1, 5);
+    cards[joker1.id] = joker1;
+    //大王
+    var joker2 = new Card(2, 5);
+    cards[joker2.id] = joker2;
 })();
 
 

@@ -5,6 +5,10 @@ cc.Class({
 
     properties: {
         cardPrefab: cc.Prefab,
+        player1: cc.Node,
+        player2: cc.Node,
+        player3: cc.Node,
+        player4: cc.Node,
         // foo: {
         //    default: null,      // The default value will be used only when the component attaching
         //                           to a node for the first time
@@ -20,17 +24,26 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this.decks = new Decks(2);
+        this.players = [];
+        this.players.push(this.player1);
+        this.players.push(this.player2);
+        this.players.push(this.player3);
+        this.players.push(this.player4);
+
     },
     random: function () {
         var x_pos = 0;
-        for (var i = 0; i < 25; i++) {
+        for (var index = 0; index < this.players.length; index++) {
+            for (var i = 0; i < 25; i++) {
             var newCard = cc.instantiate(this.cardPrefab).getComponent('Card');
-            this.node.addChild(newCard.node);
+            this.players[index].addChild(newCard.node);
             newCard.init(this.decks.draw());
-            var startPos = cc.p(x_pos, 0);
-            x_pos  += 15;
-            newCard.node.setPosition(startPos);
+            // var startPos = cc.p(x_pos, 0);
+            // x_pos  += 15;
+            // newCard.node.setPosition(startPos);
         }
+        }
+        
 
     },
     // called every frame, uncomment this function to activate update callback

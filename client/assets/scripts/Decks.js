@@ -20,11 +20,11 @@ function Decks (numberOfDecks) {
  * @method reset
  */
 Decks.prototype.reset = function () {
-    this._cardIds.length = this._numberOfDecks * 52;
+    this._cardIds.length = this._numberOfDecks * 54;
     var index = 0;
     var fromId = Types.Card.fromId;
     for (var i = 0; i < this._numberOfDecks; ++i) {
-        for (var cardId = 0; cardId < 52; ++cardId) {
+        for (var cardId = 0; cardId < 54; ++cardId) {
             this._cardIds[index] = fromId(cardId);
             ++index;
         }
@@ -46,7 +46,9 @@ Decks.prototype.draw = function () {
     var random = Math.random();
     var index = (random * len) | 0;
     var result = cardIds[index];
-
+    if(result == null){
+        console.info("fsfa");
+    }
     // 保持数组紧凑
     var last = cardIds[len - 1];
     cardIds[index] = last;

@@ -31,7 +31,10 @@ cc.Class({
 
     // use this for initialization
     init: function (card) {
-        var isFaceCard = card.point > 10;
+        // var isFaceCard = card.point > 10;
+        if(card == null){
+            console.info("null__");
+        }
         var isRed = card.isRedSuit ? "R" : "B";
         this.pointup.spriteFrame = this.cardAlats.getSpriteFrame("card_value_" + isRed +"_"+card.point);
         this.pointdown.spriteFrame = this.cardAlats.getSpriteFrame("card_value_" + isRed +"_"+card.point);
