@@ -15,18 +15,7 @@ cc.Class({
         cardAlats:cc.SpriteAtlas,
         texFrontBG: cc.SpriteFrame,
         texBackBG: cc.SpriteFrame,
-        texFaces: {
-            default: [],
-            type: cc.SpriteFrame
-        },
-        texSuitBig: {
-            default: [],
-            type: cc.SpriteFrame
-        },
-        texSuitSmall: {
-            default: [],
-            type: cc.SpriteFrame
-        }
+        
     },
 
     // use this for initialization
@@ -36,11 +25,18 @@ cc.Class({
             console.info("null__");
         }
         var isRed = card.isRedSuit ? "R" : "B";
+        isRed = card.isJoker ? "J" : isRed;
         this.pointup.spriteFrame = this.cardAlats.getSpriteFrame("card_value_" + isRed +"_"+card.point);
         this.pointdown.spriteFrame = this.cardAlats.getSpriteFrame("card_value_" + isRed +"_"+card.point);
         var suit = card.suit -1;
+        if (suit==4) {
+            suit = suit + "_" + card.point;
+            this.suitup.spriteFrame = null;
+            this.suitdown.spriteFrame = null;
+        }else{
         this.suitup.spriteFrame = this.cardAlats.getSpriteFrame("card_shape_S_"+suit);
         this.suitdown.spriteFrame = this.cardAlats.getSpriteFrame("card_shape_S_"+suit);
+        }
         this.mainPic.spriteFrame = this.cardAlats.getSpriteFrame("card_shape_L_"+suit);
         // if (isFaceCard) {
         //     this.mainPic.spriteFrame = this.texFaces[card.point - 10 - 1];

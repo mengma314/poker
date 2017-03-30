@@ -302,8 +302,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 26,
-      "y": -407
+      "x": -830,
+      "y": -319
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -474,8 +474,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -300,
-      "y": 139
+      "x": 300,
+      "y": -100
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -538,7 +538,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
+      "x": 66.5,
       "y": 0
     },
     "_skewX": 0,
@@ -1374,7 +1374,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
+      "x": 66.5,
       "y": 0
     },
     "_skewX": 0,
@@ -2210,7 +2210,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 66,
+      "x": 66.5,
       "y": 0
     },
     "_skewX": 0,
@@ -4167,7 +4167,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 202
@@ -6712,7 +6712,7 @@
     "_N$paddingRight": 0,
     "_N$paddingTop": 0,
     "_N$paddingBottom": 0,
-    "_N$spacingX": -105,
+    "_N$spacingX": -115,
     "_N$spacingY": 0,
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 0
@@ -7040,8 +7040,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 557,
-      "y": -403
+      "x": 637,
+      "y": -263
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -7050,7 +7050,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 289
@@ -9595,7 +9595,7 @@
     "_N$paddingRight": 0,
     "_N$paddingTop": 0,
     "_N$paddingBottom": 0,
-    "_N$spacingX": -105,
+    "_N$spacingX": -115,
     "_N$spacingY": 0,
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 1
@@ -9923,8 +9923,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -944,
-      "y": -26
+      "x": -1247,
+      "y": -83
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -9933,7 +9933,7 @@
     "_tag": -1,
     "_opacityModifyRGB": false,
     "_id": "",
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 376

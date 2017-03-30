@@ -34,16 +34,29 @@ cc.Class({
     random: function () {
         var x_pos = 0;
         for (var index = 0; index < this.players.length; index++) {
-            for (var i = 0; i < 25; i++) {
-            var newCard = cc.instantiate(this.cardPrefab).getComponent('Card');
-            this.players[index].addChild(newCard.node);
-            newCard.init(this.decks.draw());
-            // var startPos = cc.p(x_pos, 0);
-            // x_pos  += 15;
-            // newCard.node.setPosition(startPos);
+            var cards = [];
+            for (var j = 0; j < 25; j++) {
+                var cardinstance = this.decks.draw();
+                cards.push(cardinstance);
+                
+            }
+            cards.sort(function (a,b) {
+                if (a.suit!=b.suit) {
+                    return b.suit - a.suit;
+                } else {
+                    return b.point - a.point;
+                }
+            })
+            for (var i = 0; i < cards.length; i++) {
+                var newCard = cc.instantiate(this.cardPrefab).getComponent('Card');
+                newCard.init(cards[i]);
+                this.players[index].addChild(newCard.node);
+                // var startPos = cc.p(x_pos, 0);
+                // x_pos  += 15;
+                // newCard.node.setPosition(startPos);
+            }
         }
-        }
-        
+
 
     },
     // called every frame, uncomment this function to activate update callback

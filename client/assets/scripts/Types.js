@@ -1,5 +1,5 @@
 var Suit = cc.Enum({
-    joker:5,  // 大小王
+    Joker:5,  // 大小王
     Spade: 4,   // 黑桃
     Heart: 3,   // 红桃
     Club: 2,    // 梅花(黑)
@@ -52,6 +52,11 @@ function Card (point, suit) {
         isRedSuit: {
             get: function () {
                 return this.suit === Suit.Heart || this.suit === Suit.Diamond;
+            }
+        },
+        isJoker: {
+            get: function () {
+                return this.suit === Suit.Joker;
             }
         },
     });
