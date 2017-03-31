@@ -57,6 +57,35 @@ cc.Class({
 
         // this.suitup.spriteFrame = this.texSuitSmall[card.suit - 1];
         // this.suitdown.spriteFrame = this.texSuitSmall[card.suit - 1];
+        this.touched = false;
+        this.node.on(cc.Node.EventType.TOUCH_START, function () {
+            cc.log('Drag stated ...');
+            // this.opacity = 255;
+        }, this.node);
+        // this.node.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
+        //     // cc.log('Drag end ...');
+        //     // cc.log('Drag stated ...');
+        //     if (!this.touched) {
+        //         this.y = this.y + 80;
+        //         this.touched = true;
+        //     }else{
+        //         this.y = this.y - 80;
+        //         this.touched = false;
+        //     }
+        // }, this.node);
+        this.node.on(cc.Node.EventType.TOUCH_END, function () {
+            cc.log('Drag stated ...');
+            if (!this.touched) {
+                this.y = this.y + 80;
+                this.touched = true;
+            }else{
+                this.y = this.y - 80;
+                this.touched = false;
+            }
+            // this.opacity = 160;
+        }, this.node);
+
+
     },
     change:function(){
         var isRedSui = true;
